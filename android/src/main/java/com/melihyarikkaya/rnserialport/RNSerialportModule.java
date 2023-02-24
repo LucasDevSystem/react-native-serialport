@@ -562,7 +562,7 @@ public class RNSerialportModule extends ReactContextBaseJavaModule {
       return;
     // Fixes ERROR 4
     // Targeting S+ (version 31 and above) requires that one of FLAG_IMMUTABLE or FLAG_MUTABLE be specified when creating a PendingIntent.
-    int flags = PendingIntent.FLAG_ONE_SHOT;
+    int flags = 0;
     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
         flags = PendingIntent.FLAG_MUTABLE;
     }
